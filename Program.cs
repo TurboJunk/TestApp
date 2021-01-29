@@ -29,9 +29,10 @@ namespace TestApp
         static async Task Main(string[] args)
         {
             //Yandex OAuth token
-            string oauthToken = "AgAAAAADLLhRAADLW53pK9LvPUGEm0lezgsp4nA";
+            Console.Write("Yandex OAuth token: ");
+            string oauthToken = Console.ReadLine();
 
-            var filesPath = args[0];
+             var filesPath = args[0];
 
             FileList = new List<UploadableFile>();
             foreach (var path in Directory.GetFiles(filesPath))
